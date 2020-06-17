@@ -3,21 +3,21 @@ import './TodoItem.css'
 
 class TodoItem extends Component {
 
-    constructor({ descr }) {
+    constructor({ descr, changeComplited }) {
         super();
         this.descr = descr;
         this.state = { complited: descr.complited };
+        this.changeComplited = changeComplited
     }
 
     changeClass() {
         this.setState({
             complited: !this.state.complited
         })
+        this.changeComplited(this.descr.id);
     }
 
     render() {
-
-        console.log(new Date().toLocaleTimeString());
 
         let className_ = "item" + (this.state.complited ? ' complited' : '');
 
@@ -29,6 +29,7 @@ class TodoItem extends Component {
                 <p>
                     {this.descr.content}
                 </p>
+
             </div>
 
         )
