@@ -1,3 +1,5 @@
+/*
+
 import React, {Component} from 'react';
 import API from './JSONplaceholderService';
 import './UserList.css'
@@ -22,6 +24,7 @@ class UserList extends Component {
     runApi(){
 
         API.getUsers((result)=>this.setUsers(result.data));
+
         API.getTodos((result)=>this.setTodos(result.data));
 
 
@@ -46,8 +49,7 @@ class UserList extends Component {
         return(
             <div>
                 <h2>Пользователи</h2>
-                {this.state.user.map(user=><UsersCard user={user} />)}
-                {console.log(this.state)}
+                {this.state.users.map(user=><UsersCard user={user} />)}
             </div>
 
         )
@@ -58,3 +60,12 @@ class UserList extends Component {
 
 
 export default UserList;
+
+
+/*
+    1) создать компонент с карточкой пользователя
+
+    2) формировать список карточек пользователей при загрузке страницы
+
+*/
+
