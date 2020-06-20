@@ -11,7 +11,7 @@ class UserList extends Component {
     constructor(){
         super();
         this.state = {
-            user: [],
+            users: [],
             todos: []
         };
         this.runApi();
@@ -22,6 +22,7 @@ class UserList extends Component {
     runApi(){
 
         API.getUsers((result)=>this.setUsers(result.data));
+
         API.getTodos((result)=>this.setTodos(result.data));
 
 
@@ -39,15 +40,15 @@ class UserList extends Component {
         this.setState(()=>{
             return {users}
         });
+        console.log(this.state);
     }
 
     render(){
-                    //  onClick={()=>this.runApi()}
+
         return(
-            <div>
+            <div className='user_list'>
                 <h2>Пользователи</h2>
-                {this.state.user.map(user=><UsersCard user={user} />)}
-                {console.log(this.state)}
+                {this.state.users.map((user, i)=><UsersCard key={i} user={user} />)}
             </div>
 
         )

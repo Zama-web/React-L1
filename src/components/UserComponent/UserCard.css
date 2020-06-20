@@ -1,0 +1,15 @@
+.user_card {
+    display: inline-block;
+    background-color: darkcyan;
+    padding: 2px;
+    margin: 5px;
+    box-shadow: 0 0 10px darkblue;
+    width: 300px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+
+}
+.user_card>a {
+    color: white;
+}

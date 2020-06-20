@@ -17,7 +17,7 @@ class CounterClick extends Component {
 
         return(
             <div>
-                <p onClick={()=>this.incr()}>
+                <p onClick={()=>{this.incr();this.incr();this.incr();this.incr()}}>
                     {this.state.count}
                 </p>
             </div>

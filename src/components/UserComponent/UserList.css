@@ -1,71 +1,8 @@
-/*
-
-import React, {Component} from 'react';
-import API from './JSONplaceholderService';
-import './UserList.css'
-import UsersCard from './UsersCard'
-
-
-
-
-
-class UserList extends Component {
-    constructor(){
-        super();
-        this.state = {
-            user: [],
-            todos: []
-        };
-        this.runApi();
-
-
-    }
-
-    runApi(){
-
-        API.getUsers((result)=>this.setUsers(result.data));
-
-        API.getTodos((result)=>this.setTodos(result.data));
-
-
-    }
-
-    setTodos(todos){
-
-        this.setState(()=>{
-            return {todos}
-        });
-    }
-
-    setUsers(users){
-
-        this.setState(()=>{
-            return {users}
-        });
-    }
-
-    render(){
-                    //  onClick={()=>this.runApi()}
-        return(
-            <div>
-                <h2>Пользователи</h2>
-                {this.state.users.map(user=><UsersCard user={user} />)}
-            </div>
-
-        )
-    }
-
+.user_list>h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: darkcyan;
+    box-shadow: 0 0 10px darkblue;
 }
-
-
-
-export default UserList;
-
-
-/*
-    1) создать компонент с карточкой пользователя
-
-    2) формировать список карточек пользователей при загрузке страницы
-
-*/
-

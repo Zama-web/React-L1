@@ -12,10 +12,5 @@ const getUsers = (callback, errorHendler=(()=>{}))=>host.get('/users').then(call
 const getTodos = (callback, errorHendler=(()=>{}))=>host.get('/todos').then(callback, errorHendler);
 
 
-// const getUsersAwait = await host.get('/users');
-
-// const getTodosAwait = await host.get('/todos');
-
-
 
 export default {getUsers, getTodos}
