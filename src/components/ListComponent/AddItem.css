@@ -1,0 +1,19 @@
+.field{
+    background-color: lightgreen;
+    width: 300px;
+    padding: 5px;
+}
+label{
+    width: 100px;
+    display: inline-block;
+}
+input{
+    border: 0;
+}
+Form button{
+    padding: 5px;
+    width: 310px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
