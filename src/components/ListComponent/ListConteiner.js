@@ -35,17 +35,18 @@ class ListContainer extends Component {
             const user ={id, name, username, phone}
             prev.users.push(user);
             return prev;
-        })
-        console.log(this.state);
- 
+        }) 
     }
 
-    sortById(){
+    sortById({desc}){
+        
        this.setState((prev)=>{
-           prev.users.sort((a,b)=>a.id-b.id);
+           const coef = +desc*2 -1;
+           prev.users.sort((a,b)=>coef*(a.id-b.id));
            return prev;
        })
     }
+
     sortByWord(attr){
             this.setState((prev)=>{
             prev.users.sort((a, b)=>{
@@ -59,9 +60,7 @@ class ListContainer extends Component {
         });
         return prev;
        })
-
     }
-
 
     render(){
 
