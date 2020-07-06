@@ -1,8 +1,19 @@
 .listItem {
     background-color: lightgreen;
     text-decoration: underline;
-    cursor: pointer;
     margin: 10px;
     padding: 5px;
     box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    display: contents;
+}
+.deleteList {
+    color: red;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
 }

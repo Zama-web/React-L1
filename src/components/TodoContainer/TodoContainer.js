@@ -65,7 +65,8 @@ class TodoContainer extends Component {
 
     changeComplited(id){
         const data = this.state.data
-        data.find(elem=>elem.id === id).complited = !data.find(elem=>elem.id === id).complited
+        data.find(elem=>elem.id === id)
+            .complited = !data.find(elem=>elem.id === id).complited
         this.setState({data});
     }
 
